@@ -52,7 +52,7 @@ bot.on("text", async (ctx) => {
     }
 
     if (isCooldown(userId)) {
-        return ctx.reply("⛔ Please wait before sending another code.");
+        return ctx.reply("⛔ Please wait for 30sec before sending another code.");
     }
 
     setCooldown(userId);
