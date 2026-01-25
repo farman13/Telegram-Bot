@@ -11,7 +11,7 @@ dotenv.config();
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 // ================= CONFIG =================
-const COOLDOWN = 1 * 30 * 1000; // 1 minute
+const COOLDOWN = 1 * 5 * 1000; // 1 minute
 const userCooldown = new Map();
 const userLanguage = new Map();
 
@@ -52,7 +52,7 @@ bot.on("text", async (ctx) => {
     }
 
     if (isCooldown(userId)) {
-        return ctx.reply("⛔ Please wait for 30sec before sending another code.");
+        return ctx.reply("⛔ Please wait for 5sec before sending another code.");
     }
 
     setCooldown(userId);
